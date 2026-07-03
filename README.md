@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 95c4ade (commit 1: project setup and README)
 # 📚 Library Management System
 
 A Java OOP project implementing a fully functional library system.
@@ -23,4 +26,8 @@ src/library/
 ├── interfaces/    → Borrowable, Searchable
 ├── services/      → LibraryService, FineCalculator
 ├── exceptions/    → Custom exceptions
+<<<<<<< HEAD
 └── Main.java      → Entry point
+=======
+└── Main.java      → Entry point
+>>>>>>> 95c4ade (commit 1: project setup and README)
