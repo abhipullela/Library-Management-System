@@ -51,7 +51,5 @@ public class Book {
         return String.format("[%s] \"%s\" by %s | %s | %s",
             bookId, title, author, genre,
             isAvailable ? "Available" : "Borrowed");
-    }
-
-    
+    }   
 }
