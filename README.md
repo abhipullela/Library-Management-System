@@ -28,3 +28,41 @@ src/library/
 ├── exceptions/    → Custom exceptions
 └── Main.java      → Entry point
 └── Main.java      → Entry point
+
+## Detailed Proposed Project Structure
+src/
+└── library/
+    ├── Main.java
+    ├── models/
+    │   ├── Book.java
+    │   ├── BookCopy.java
+    │   ├── Member.java
+    │   ├── Student.java
+    │   ├── Teacher.java
+    │   └── Loan.java
+    ├── interfaces/
+    │   ├── Searchable.java
+    │   └── FinePolicy.java
+    ├── services/
+    │   ├── LibraryService.java
+    │   ├── LoanService.java
+    │   └── FineCalculator.java
+    ├── repositories/
+    │   ├── BookRepository.java
+    │   ├── MemberRepository.java
+    │   └── LoanRepository.java
+    ├── exceptions/
+    │   ├── BookNotFoundException.java
+    │   ├── BookUnavailableException.java
+    │   ├── MemberNotFoundException.java
+    │   └── LoanException.java
+    └── persistence/
+        └── FileStorage.java
+
+test/
+└── library/
+    ├── services/
+    └── models/
+
+docs/
+└── class-diagram.md
