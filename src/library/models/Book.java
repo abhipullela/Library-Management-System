@@ -3,7 +3,7 @@ package library.models;
 import java.time.LocalDate;
 
 public class Book {
-    private String BookId;
+    private String bookId;
     private String title;
     private String author;
     private String genre;
@@ -11,7 +11,7 @@ public class Book {
     private LocalDate borrowDate;
 
     public Book (String BookId, String title, String author, String genre, boolean isAvailable, LocalDate BorrowDate) {
-        this.BookId = BookId;
+        this.bookId = BookId;
         this.title = title;
         this.author = author;
         this.genre = genre;
@@ -20,7 +20,7 @@ public class Book {
     }
 
     public String getBookId() {
-        return BookId;
+        return bookId;
     }
 
     public String getTitle() {
@@ -49,7 +49,7 @@ public class Book {
     @Override
     public String toString() {
         return String.format("[%s] \"%s\" by %s | %s | %s",
-            BookId, title, author, genre,
+            bookId, title, author, genre,
             isAvailable ? "Available" : "Borrowed");
     }
 
