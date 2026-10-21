@@ -46,15 +46,12 @@ public class LoanService {
         if (!copy.isAvailable()) {
             throw new BookCopyNotAvailableException("Book copy is not available");
         }
-
         if (checkoutDate == null) {
             throw new IllegalArgumentException("Checkout date cannot be null");
         }
-
         if (loanId == null || loanId.isBlank()) {
             throw new IllegalArgumentException("Loan ID cannot be empty");
         }
-
         if (loanRepository.findById(loanId) != null) {
             throw new IllegalArgumentException("Loan ID already exists");
         }
@@ -66,15 +63,12 @@ public class LoanService {
                 activeLoans++;
             }
         }
-
         if (activeLoans >= member.getBorrowingLimit()) {
             throw new BorrowingLimitExceededException("Member has reached the borrowing limit");
         }
 
         Loan loan = new Loan(loanId, member, copy, checkoutDate);
-
         loanRepository.add(loan);
-
         return loan;
     }
 
@@ -84,23 +78,18 @@ public class LoanService {
         if (loan == null) {
             throw new LoanNotFoundException("Loan not found");
         }
-
         if (returnDate == null) {
             throw new IllegalArgumentException("Return date cannot be null");
         }
-
         if (loan.isReturned()) {
             throw new IllegalStateException("This loan has already been returned");
         }
-
         if (returnDate.isBefore(loan.getCheckoutDate())) {
             throw new IllegalArgumentException("Return date cannot be before checkout date");
         }
 
         double fine = finePolicy.calculateFine(loan.getDueDate(), returnDate);
-
         loan.returnBook(returnDate);
-
         return fine;
     }
 
