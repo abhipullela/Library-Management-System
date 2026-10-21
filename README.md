@@ -46,16 +46,17 @@ src/
     ├── services/
     │   ├── LibraryService.java
     │   ├── LoanService.java
-    │   └── FineCalculator.java
+    │   └── StandardFinePolicy.java
     ├── repositories/
     │   ├── BookRepository.java
     │   ├── MemberRepository.java
     │   └── LoanRepository.java
     ├── exceptions/
     │   ├── BookNotFoundException.java
-    │   ├── BookUnavailableException.java
-    │   ├── MemberNotFoundException.java
-    │   └── LoanException.java
+    |   ├── MemberNotFoundException.java
+    |   ├── BookCopyNotAvailableException.java
+    |   ├── BorrowingLimitExceededException.java
+    |   └── LoanNotFoundException.java
     └── persistence/
         └── FileStorage.java
 

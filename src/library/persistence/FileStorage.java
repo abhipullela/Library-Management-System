@@ -1,4 +1,4 @@
-package library.repositories;
+package library.persistence;
 
 public class FileStorage {
     
